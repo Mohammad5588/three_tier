@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Classifier</title>
+</head>
+<body>
+    <h2>Classify Email</h2>
+    <form action="/predict" method="post">
+        <label for="content">Enter Email Content:</label><br>
+        <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+        <p>Email Content: {{ email }}</p>
+    {% endif %}
+</body>
+</html>
